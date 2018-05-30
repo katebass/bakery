@@ -11,11 +11,6 @@ use App\Repositories\AdminRepository;
 
 class AuthenticationController extends Controller
 {
-  protected $model;
-
-  public function __construct(Admin $admin){
-  	$this->model = new AdminRepository($admin);
-  }
 
   public function login(Request $request){
 
