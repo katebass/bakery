@@ -16,7 +16,16 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="container">
+
+        @if(Auth::guard('admin')->check())
+            <button type="button" class="btn btn-default button-join">
+                <a href="{{ route('createcategory') }}">
+                    Создать новую категорию
+                </a>
+            </button>
+        @endif
+
         @forelse($categories as $category)
             @include('categories.category')
         @empty

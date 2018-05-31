@@ -1,19 +1,18 @@
 <div class="category-item">
-		@auth
-			<button type="button" class="btn btn-danger button-join">
-				<a href="{{ route('deletecategory', $category->id) }}">
-					Удалить категорию
-				</a>
-			</button>
-		@endauth
+
+	@if(Auth::guard('admin')->check())
+		<button type="button" class="btn btn-default button-join">
+			<a href="">
+				Добавить наименование
+			</a>
+		</button>
+	@endif
 		
-	<h3>
-		<a href="">
+	<a href="">
+		<h2>
 			<u>{{ $category->title }}</u>
-		</a>
-	</h3>
-	
-	<hr>
+		</h2>
+	</a>
 
 	<h2>
 		{{ $category->description }}
@@ -23,11 +22,11 @@
 		<strong>Количество наименований: {{ $category->items->count() }}</strong>
 	</p>
 
-	@auth
-		<button type="button" class="btn btn-primary button-join">
-			<a href="{{ route('additem', $category->id) }}">
-				Добавить наименование
+	@if(Auth::guard('admin')->check())
+		<button type="button" class="btn btn-default button-join">
+			<a href="{{ route('deletecategory', $category->id) }}">
+				Удалить категорию
 			</a>
 		</button>
-	@endauth
+	@endif
 </div>
