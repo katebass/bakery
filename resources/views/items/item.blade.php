@@ -1,5 +1,10 @@
 <div class="category-item item">
 	<div class="element">
+
+		<a href="{{ route('addtocart', $item) }}" class="btn btn-default button-join">
+			Добавить в корзину
+		</a>
+
 		<a href="">
 			<h2 class="item-title">
 				<u>{{ $item->title }}</u>
@@ -15,11 +20,9 @@
 		</h3>
 
 		@if(Auth::guard('admin')->check())			
-			<button type="button" class="btn btn-default button-join">
-				<a href="">
-					Удалить Товар
-				</a>
-			</button>
+			<a href="" class="btn btn-default button-join">
+				Удалить Товар
+			</a>
 		@endif
 	</div>
 
