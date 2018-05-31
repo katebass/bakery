@@ -11,31 +11,31 @@
 @section('content')
 
     <div class="banner">
+        <div class="blure"></div>
         <div class="container">
-            <h3>Это баннер</h3>
+            <h3 class="banner-title">Кондитерская "Зефир"</h3>
         </div>
     </div>
 
-    <div class="container">
-        @if(Auth::guard('admin')->check())
-            <button type="button" class="btn btn-default button-join">
-                <a href="{{ route('createcategory') }}">
-                    Создать новую категорию
-                </a>
-            </button>
-        @endif
-        
-        <div class="flex-container">
+        <div class="container">
+            @if(Auth::guard('admin')->check())
+                <button type="button" class="btn btn-default button-join">
+                    <a href="{{ route('createcategory') }}">
+                        Создать новую категорию
+                    </a>
+                </button>
+            @endif
+            
+            <div class="flex-container">
 
 
-            @forelse($categories as $category)
-                @include('categories.category')
-            @empty
-                Категорий нет
-            @endforelse
-        </div>
-        
+                @forelse($categories as $category)
+                    @include('categories.category')
+                @empty
+                    Категорий нет
+                @endforelse
+            </div>
+            
     </div>
-  
   
 @endsection

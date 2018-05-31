@@ -25,8 +25,10 @@
 <body>
 	
 	@include('layout.nav')
-
+<div class="content">
 	@yield('content')
+</div>
+
 	
 	@include('layout.footer')
 	

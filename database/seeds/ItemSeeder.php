@@ -72,7 +72,7 @@ class ItemSeeder extends Seeder
 
         $arr2[] = $item->id;
 
-        $item = new App\Item(['title' => 'Печенье с изюмом', 'description' => 'этот торт самый лучший', 'price' => 100.00, 'photo' => "https://s1.eda.ru/StaticContent/Photos/120131083347/150811232211/p_O.jpg"]);
+        $item = new App\Item(['title' => 'Печенье с изюмом', 'description' => 'это печенье самое лучшее', 'price' => 100.00, 'photo' => "https://s1.eda.ru/StaticContent/Photos/120131083347/150811232211/p_O.jpg"]);
         $item->category()->associate($category);
         $item->save();
 

@@ -12,6 +12,11 @@ use App\Repositories\AdminRepository;
 class AuthenticationController extends Controller
 {
 
+	public function __construct()
+	{
+	    $this->middleware('guest:admin')->only('login');
+	}
+
   public function login(Request $request){
 
 	if (! Auth::guard('admin')->attempt( ['login' => $request->login, 'password' => $request->password] ) )

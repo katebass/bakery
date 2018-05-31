@@ -11,8 +11,8 @@
 @section('content')
 
 	<div class="container">
-		<h3 class="section-title">Новая категория</h3>
-		<form action="{{ route('storecategory') }}" method="POST">
+		<h3 class="section-title">Новый товар</h3>
+		<form action="{{ route('storeitem', $categoryid) }}" method="POST">
 			{{ csrf_field() }}
 
 			<div class="form-group">
@@ -20,13 +20,18 @@
 			</div>
 
 			<div class="formgroup">
-				<label class="col-sm-4" for="">Название категории:</label>
+				<label class="col-sm-4" for="">Название товара:</label>
 				<input class="col-sm-4" type="text" name="title">
 			</div>
 
 			<div class="formgroup">
 				<label class="col-sm-4" for="">Описание:</label>
 				<input class="col-sm-4" type="text" name="description">
+			</div>
+
+			<div class="formgroup">
+				<label class="col-sm-4" for="">Цена:</label>
+				<input class="col-sm-4" type="text" name="price">
 			</div>
 
 			<div class="formgroup">

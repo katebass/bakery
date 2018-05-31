@@ -22,9 +22,13 @@ class CategoriesController extends Controller
 
 
 	public function create(Request $request){
+		if($request->photo){
 		$this->category->create($request->only(['title', 'description', 'photo']));
+		} else{
+			$this->category->create($request->only(['title', 'description']));
+		}
 
-		return redirect()->back();
+		return redirect()->home();
 	}
 
 	public function delete($id){

@@ -19,7 +19,7 @@ class CreateItemsTable extends Migration
 			$table->string('title');
             $table->string('description');
             $table->decimal('price', 8, 2);
-            $table->string('photo');
+            $table->string('photo')->nullable()->default("https://avatanplus.com/files/resources/mid/57de41539df151573c2f2ebf.png");
 			$table->timestamps();
 
 			$table->foreign('category_id')

@@ -6,7 +6,7 @@
       <a class="nav-link nav-right" href=""><i class="fa fa-shopping-cart"></i> Касса</a>
 
       @auth
-        <a class="nav-link" href="">Create </a>
+        <a class="nav-link" href="">Создать раздел </a>
         <a class="nav-link" href="">Tasks</a>
         <a class="nav-link" href="">Solutions</a>
         <a class="nav-link ml-auto" href="#">Hello, {{ Auth::user()->name }}!</a>
