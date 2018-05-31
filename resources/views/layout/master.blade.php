@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>
-		Music
+		Backery
 		@hasSection('title')
 			| 
 			@yield('title')
@@ -17,18 +17,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link href="/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
 
     @yield('styles')
 
 </head>
 <body>
+	
 	@include('layout.nav')
 
 	@yield('content')
-
+	
 	@include('layout.footer')
-
-
+	
 	<script src="/js/main.js"></script>
 	<script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

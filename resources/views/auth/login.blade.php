@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-	Admin Login
+	Login
 @endsection
 
 @section('content')
@@ -17,8 +17,8 @@
 		</div>
 
 		<div class="form-group">
-			<label for="email">Email Adress:</label>
-			<input type="email" class="form-control col-sm-5" id="email" name="email" required>	
+			<label for="login">Login:</label>
+			<input type="login" class="form-control col-sm-5" id="login" name="login" required>	
 		</div>
 
 		<div class="form-group">

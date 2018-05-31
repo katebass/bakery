@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 })->name('home');
 
-Route::view('/login', 'auth.signin')->name('login');
+
+Route::view('/login', 'auth.login')->name('login');
 Route::post('/login', 'AuthenticationController@login')->name('login-post');
 Route::get('/logout', 'AuthenticationController@destroy')->name('logout');

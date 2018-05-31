@@ -1,0 +1,17 @@
+.navigation{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.nav-right{
+	position: absolute;
+	right: 10%;
+}
+
+@media screen and (max-width 768px){
+	.nav-right{
+		position: static;
+		background-color: red;
+	}
+}
