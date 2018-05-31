@@ -33,4 +33,11 @@ class CategoriesController extends Controller
 		return redirect()->home();
 	}
 
+
+    public function itemList($id){
+	    $items = Category::find($id)->items()->get();
+
+		return view('categories.item-list', compact('items'));
+    }
+
 }

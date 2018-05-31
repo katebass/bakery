@@ -17,7 +17,6 @@
     </div>
 
     <div class="container">
-
         @if(Auth::guard('admin')->check())
             <button type="button" class="btn btn-default button-join">
                 <a href="{{ route('createcategory') }}">
@@ -25,12 +24,17 @@
                 </a>
             </button>
         @endif
+        
+        <div class="flex-container">
 
-        @forelse($categories as $category)
-            @include('categories.category')
-        @empty
-            Категорий нет
-        @endforelse
+
+            @forelse($categories as $category)
+                @include('categories.category')
+            @empty
+                Категорий нет
+            @endforelse
+        </div>
+        
     </div>
   
   

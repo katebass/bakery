@@ -10,3 +10,5 @@ Route::get('/logout', 'AuthenticationController@destroy')->name('logout');
 Route::get('/categories/delete/{id}', 'CategoriesController@delete')->name('deletecategory');
 Route::view('categories/new', 'categories.new')->name('createcategory');
 Route::post('categories/create', 'CategoriesController@create')->name("storecategory");
+
+Route::get('category/{id}/items', 'CategoriesController@itemList')->name('itemsList');

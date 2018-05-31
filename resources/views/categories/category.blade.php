@@ -7,8 +7,8 @@
 			</a>
 		</button>
 	@endif
-		
-	<a href="">
+
+	<a href="{{ route('itemsList',$category->id) }}">
 		<h2>
 			<u>{{ $category->title }}</u>
 		</h2>
