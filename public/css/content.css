@@ -2,7 +2,7 @@
 	position: relative;
 	height: 70vh;
 	padding: 50px;
-	background-image: url('https://i.imgur.com/dEzPrT6.png');
+	background-image: url('https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/169189.jpg');
 	background-size: cover;
 	color: white;
 	padding-top: 30vh;
@@ -45,6 +45,7 @@
 
 .category-item img{
 	width: 400px;
+	height: 400px;
 	border-radius: 50px;
 	border: 4px solid grey;
 }

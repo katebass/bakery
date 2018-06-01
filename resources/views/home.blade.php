@@ -11,7 +11,6 @@
 @section('content')
 
     <div class="banner">
-        <div class="blure"></div>
         <div class="container">
             <h3 class="banner-title">Кондитерская "Зефир"</h3>
         </div>
