@@ -33,4 +33,10 @@ class ItemsController extends Controller
 
 		return redirect()->home();
 	}
+
+	public function delete($id){
+		$this->item->delete($id);
+
+		return redirect()->back();
+	}
 }

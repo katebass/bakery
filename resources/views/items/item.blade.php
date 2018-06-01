@@ -20,7 +20,7 @@
 		</h3>
 
 		@if(Auth::guard('admin')->check())			
-			<a href="" class="btn btn-default button-join">
+			<a href="{{ route('deleteitem', $item->id) }}" class="btn btn-default button-join">
 				Удалить Товар
 			</a>
 		@endif

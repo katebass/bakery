@@ -10,3 +10,5 @@ Route::post('categories/create', 'CategoriesController@create')->name("storecate
 
 Route::get('categories/{id}/newitem', 'ItemsController@newSolution')->name('createitem');
 Route::post('categories/{id}/createitem', 'ItemsController@create')->name("storeitem");
+
+Route::get('/items/delete/{id}', 'ItemsController@delete')->name('deleteitem');
