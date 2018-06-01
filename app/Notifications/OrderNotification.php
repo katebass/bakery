@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use App\Order;
 
 class OrderNotification extends Notification
 {
@@ -25,8 +26,8 @@ class OrderNotification extends Notification
             $this->quantities[] = $product->pivot->quantity;
         }
 
-        $this->products = $this->products->implode('name', ', ');
-        $this->quantities = implode(',', $this->quantities);
+        $this->products = $this->products->implode('title', ', ');
+        $this->quantities = implode(', ', $this->quantities);
     }
 
     public function via($notifiable)
@@ -37,12 +38,11 @@ class OrderNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('order received')
-                    ->from('shop')
-                    ->line("You have received an order from #{$this->order->customer_name} :")
+                    ->subject('Получен новый заказ.')
+                    ->line("Вы получили заказ от {$this->order->customer_name} :")
                     ->line($this->products)
-                    ->line(" in respective quantities: #{$this->count}")
-                    ->line("Customer email: #{$this->order->customer_email}")
-                    ->line("Customer email: #{$this->order->customer_phone}");
+                    ->line(" В количестве: {$this->quantities}")
+                    ->line("email клиента: {$this->order->customer_email}")
+                    ->line("номер клиента: {$this->order->customer_phone}");
     }
 }

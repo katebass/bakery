@@ -16,8 +16,10 @@
             <h3 class="banner-title">Кондитерская "Зефир"</h3>
         </div>
     </div>
-
+    
         <div class="container">
+
+
             @if(Auth::guard('admin')->check())
                     <a href="{{ route('createcategory') }}" class="button">
                         Создать новую категорию

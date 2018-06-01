@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Item;
 use App\Http\Requests\OrderRequest;
 use App\Order;
+use App\Admin;
+use App\Notifications\OrderNotification;
 
 class OrdersController extends Controller
 {
@@ -57,11 +59,14 @@ class OrdersController extends Controller
 		$idsWithQuntity = array_count_values(array_column($cart, 'id'));
 		$order = Order::create($request->only(['customer_name', 'customer_email', 'customer_phone']));
 		foreach($idsWithQuntity as $id => $quantity){
-			$order->items()->syncWithoutDetaching([$id, ['quantity' =>$quantity]]);
+			$order->items()->syncWithoutDetaching([$id => ['quantity' =>$quantity]]);
 		}
 		$request->session()->flush();
 		$request->session()->save();
-
+		
+		Admin::first()->notify(new OrderNotification($order));
 		return redirect()->route('home');
 	}
+
+
 }

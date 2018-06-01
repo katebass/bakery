@@ -13,6 +13,6 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        App\Admin::create(['login' => 'admin', 'password' => Hash::make('123')]);
+        App\Admin::create(['login' => 'admin', 'password' => Hash::make('123'), 'email' => 'ycasperinho@gmail.com']);
     }
 }
