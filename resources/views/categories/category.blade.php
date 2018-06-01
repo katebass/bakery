@@ -22,17 +22,13 @@
 		</p>
 
 		@if(Auth::guard('admin')->check())
-			<button type="button" class="btn btn-default button-join">
-				<a href="{{ route('createitem', $category->id) }}">
+				<a href="{{ route('createitem', $category->id) }}" class="button">
 					Создать новый товар
 				</a>
-			</button>
 
-			<button type="button" class="btn btn-default button-join">
-				<a href="{{ route('deletecategory', $category->id) }}">
+				<a href="{{ route('deletecategory', $category->id) }}" class="button">
 					Удалить категорию
 				</a>
-			</button>
 		@endif
 	</div>
 

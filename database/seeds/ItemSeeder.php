@@ -17,7 +17,7 @@ class ItemSeeder extends Seeder
     	//cakes
     	$category = App\Category::create(['title' => 'Торты', 'description' => 'Наши торты. Только свежая и вкусная выпечка', 'photo' => "https://static.1000.menu/img/content/4999/shvarcvaldskii-vishnevyi-tort_1396253792_1_max.jpg"]);
 
-    	$order = App\Order::create(['customer_phone' => '050-212-12-12', 'customer_email' => 'customer@gmail.com']);
+    	$order = App\Order::create(['customer_name' => 'Johc Doe','customer_phone' => '050-212-12-12', 'customer_email' => 'customer@gmail.com']);
 
     	$arr = [];
 
@@ -51,7 +51,7 @@ class ItemSeeder extends Seeder
         //biscuits
         $category = App\Category::create(['title' => 'Печенье', 'description' => 'Наше печенье. Только свежая и вкусная выпечка', 'photo' => "https://static.1000.menu/img/content/8729/pechene-kurabe_1486594445_ogv2_og.jpg"]);
 
-        $order = App\Order::create(['customer_phone' => '067-333-44-55', 'customer_email' => 'thecustomer@gmail.com']);
+        $order = App\Order::create(['customer_name' => 'Jane Doe', 'customer_phone' => '067-333-44-55', 'customer_email' => 'thecustomer@gmail.com']);
 
         $arr2 = [];
         $item = new App\Item(['category_id' => 1, 'title' => 'Шоколадное печенье', 'description' => 'Очень вкусно', 'price' => 100.00, 'photo' => "https://s1.eda.ru/StaticContent/Photos/120131083347/150811232211/p_O.jpg"]);

@@ -19,11 +19,9 @@
 
         <div class="container">
             @if(Auth::guard('admin')->check())
-                <button type="button" class="btn btn-default button-join">
-                    <a href="{{ route('createcategory') }}">
+                    <a href="{{ route('createcategory') }}" class="button">
                         Создать новую категорию
                     </a>
-                </button>
             @endif
             
             <div class="flex-container">

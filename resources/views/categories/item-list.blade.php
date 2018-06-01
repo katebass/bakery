@@ -14,16 +14,13 @@
 		<h3 class="section-title">
 			{{ $items->first()->category->title }}
 		</h3>
-
-
 	@endif
 
 	<div class="group-list">
 		<div class="container">
 			
 			@if(Auth::guard('admin')->check())
-				<button type="button" class="btn btn-default button-join">
-					<a href="">
+					<a href="{{ route('createitem', $items->first()->category->id) }}" class="button">
 						Новый товар
 					</a>
 				</button>
