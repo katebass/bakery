@@ -17,7 +17,7 @@ class CreateItemOrderTable extends Migration
             $table->increments('id');
             $table->integer('item_id')->unsigned()->index();
             $table->integer('order_id')->unsigned()->index();
-            $table->integer('count')->default(1);
+            $table->integer('quantity')->default(1);
             $table->timestamps();
 
             $table->foreign('item_id')

@@ -18,7 +18,6 @@
 
 	<div class="group-list">
 		<div class="container">
-			
 			@if(Auth::guard('admin')->check())
 					<a href="{{ route('createitem', $items->first()->category->id) }}" class="button">
 						Новый товар

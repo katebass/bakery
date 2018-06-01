@@ -16,3 +16,6 @@ Route::get('items/addtocart/{item}', 'OrdersController@addToCart')->name('addtoc
 Route::get('clearcart', 'OrdersController@clearCart')->name('clearcart');
 
 Route::get('items/deletefromcart/{item}', 'OrdersController@deleteFromCart')->name('deletefromcart');
+
+Route::view('/orders/new', 'neworder')->name('neworder')->middleware('checkcart');
+Route::post('/orders/new', 'OrdersController@create')->name('createorder');

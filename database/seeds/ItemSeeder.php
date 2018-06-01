@@ -17,7 +17,7 @@ class ItemSeeder extends Seeder
     	//cakes
     	$category = App\Category::create(['title' => 'Торты', 'description' => 'Наши торты. Только свежая и вкусная выпечка', 'photo' => "https://static.1000.menu/img/content/4999/shvarcvaldskii-vishnevyi-tort_1396253792_1_max.jpg"]);
 
-    	$order = App\Order::create(['customer_name' => 'Johc Doe','customer_phone' => '050-212-12-12', 'customer_email' => 'customer@gmail.com']);
+    	$order = App\Order::create(['customer_name' => 'John Doe','customer_phone' => '050-212-12-12', 'customer_email' => 'customer@gmail.com']);
 
     	$arr = [];
 

@@ -39,7 +39,7 @@ class OrderNotification extends Notification
         return (new MailMessage)
                     ->subject('order received')
                     ->from('shop')
-                    ->line("You have received an order number #{$this->order->id} :")
+                    ->line("You have received an order from #{$this->order->customer_name} :")
                     ->line($this->products)
                     ->line(" in respective quantities: #{$this->count}")
                     ->line("Customer email: #{$this->order->customer_email}")
