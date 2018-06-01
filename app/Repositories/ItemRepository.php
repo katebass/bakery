@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Repositories;
 
@@ -14,6 +14,7 @@ class ItemRepository extends Repository{
 	$item->title = $array['title'];
 	$item->description = $array['description'];
 	$item->price = $array['price'];
+    $item->photo = $array['photo'];
 
 	$item->save();
 
