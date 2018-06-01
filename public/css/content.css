@@ -4,7 +4,7 @@
 	padding: 50px;
 	background-image: url('https://i.imgur.com/dEzPrT6.png');
 	background-size: cover;
-	color: black;
+	color: white;
 	padding-top: 30vh;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .content{
-	background-color: rgb(96, 64, 31);
+	background-color: white;
 	min-height: calc(100vh - 34px);
 }
 
@@ -40,7 +40,6 @@
 	margin: 30px 10px;
 	padding: 20px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	background-color: rgb(161, 121, 80);
 	border-radius: 25px;
 }
 

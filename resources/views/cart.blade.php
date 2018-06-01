@@ -10,9 +10,6 @@
 
 @section('content')
 		<div class="container">
-			<a href="{{ route('clearcart') }}" class="button"> 
-				Удалить все товары из корзины
-			</a>
 
 			@if( session()->has('cart') )
 				@foreach(session('cart') as $item)
@@ -21,10 +18,13 @@
 				@endforeach
 
 				<a href="{{ route('neworder') }}" class="button">Оформить заказ</a>
+
+			<a href="{{ route('clearcart') }}" class="button"> 
+				Удалить все товары из корзины
+			</a>
 			@else
 				<h2 style="color: black">Товаров в корзине нет.</h2>
 			@endif
-
 
 		</div>
   
