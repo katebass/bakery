@@ -1,8 +1,8 @@
-<div class="category-item category">
+<div class="category-item">
 
-	<div class="element-photo">
+	<div>
 		<a href="{{ route('itemsList',$category->id) }}">
-			<img src="{{ $category->photo }}" alt="">
+			<img class="element-photo" src="{{ $category->photo }}" alt="">
 		</a>
 	</div>
 

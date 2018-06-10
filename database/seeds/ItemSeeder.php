@@ -49,7 +49,7 @@ class ItemSeeder extends Seeder
 
 
         //biscuits
-        $category = App\Category::create(['title' => 'Печенье', 'description' => 'Наше печенье. Только свежая и вкусная выпечка', 'photo' => "https://static.1000.menu/img/content/8729/pechene-kurabe_1486594445_ogv2_og.jpg"]);
+        $category = App\Category::create(['title' => 'Печенье', 'description' => 'Наше печенье. Только свежая и вкусная выпечка', 'photo' => "http://img.povar.ru/uploads/0c/8f/7d/57/pechene_quotden_i_nochquot-327319.jpg"]);
 
         $order = App\Order::create(['customer_name' => 'Jane Doe', 'customer_phone' => '067-333-44-55', 'customer_email' => 'thecustomer@gmail.com']);
 

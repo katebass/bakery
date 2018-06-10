@@ -16,24 +16,22 @@
         </div>
     </div>
     
-        <div class="container">
+    <div class="container">
 
+        @if(Auth::guard('admin')->check())
+                <a href="{{ route('createcategory') }}" class="button">
+                    Создать новую категорию
+                </a>
+        @endif
+        
+        <div class="categories-container">
 
-            @if(Auth::guard('admin')->check())
-                    <a href="{{ route('createcategory') }}" class="button">
-                        Создать новую категорию
-                    </a>
-            @endif
-            
-            <div class="flex-container">
-
-
-                @forelse($categories as $category)
-                    @include('categories.category')
-                @empty
-                    Категорий нет
-                @endforelse
-            </div>
+            @forelse($categories as $category)
+                @include('categories.category')
+            @empty
+                Категорий нет
+            @endforelse
+        </div>
             
     </div>
   
