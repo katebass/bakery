@@ -17,7 +17,7 @@
     </div>
     
     <div class="container">
-
+        
         @if(Auth::guard('admin')->check())
                 <a href="{{ route('createcategory') }}" class="button">
                     Создать новую категорию

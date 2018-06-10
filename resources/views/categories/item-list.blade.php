@@ -16,8 +16,9 @@
 		</h3>
 	@endif
 
-	<div class="group-list">
-		<div class="container">
+	<div class="container">
+		
+		<div class="items-container">
 			@if(Auth::guard('admin')->check())
 					<a href="{{ route('createitem', $items->first()->category->id) }}" class="button">
 						Новый товар
@@ -31,6 +32,7 @@
 				Товаров для данной секции пока не существует.
 			@endforelse
 		</div>
+
 	</div>
   
   

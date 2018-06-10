@@ -1,5 +1,5 @@
-<div class="category-item item">
-	<div class="element">
+<div class="item">
+	<div class="item-content-container">
 
 		<a href="{{ route('addtocart', $item) }}" class="btn btn-default button-join">
 			Добавить в корзину
@@ -26,7 +26,8 @@
 		@endif
 	</div>
 
-	<div class="element-photo">
-		<img src="{{ $item->photo }}" alt="">
+	<div class="photo-container">
+		<img class="element-photo" src="{{ $item->photo }}" alt="">
 	</div>
+
 </div>
